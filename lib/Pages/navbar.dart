@@ -1,6 +1,9 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:simple_icons/simple_icons.dart';
 import 'package:untitled/Pages/custom_animated_bottom_bar.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:untitled/Pages/linkedin_page.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
@@ -46,24 +49,24 @@ class _MyHomePageState extends State<MyHomePage> {
           textAlign: TextAlign.center,
         ),
         BottomNavyBarItem(
-          icon: const Icon(Icons.ac_unit),
+          icon: const Icon(SimpleIcons.linkedin),
           title: const Text('Linkedln'),
           activeColor: Colors.purpleAccent,
           inactiveColor: _inactiveColor,
           textAlign: TextAlign.center,
         ),
         BottomNavyBarItem(
-          icon: const Icon(Icons.message),
+          icon: const Icon(SimpleIcons.github),
           title: const Text(
-            'Notes',
+            'Github',
           ),
           activeColor: Colors.pink,
           inactiveColor: _inactiveColor,
           textAlign: TextAlign.center,
         ),
         BottomNavyBarItem(
-          icon: const Icon(Icons.settings),
-          title: const Text('About'),
+          icon: const Icon(SimpleIcons.instagram),
+          title: const Text('Instagram'),
           activeColor: Colors.blue,
           inactiveColor: _inactiveColor,
           textAlign: TextAlign.center,
@@ -79,11 +82,14 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           children: <Widget>[
             AppBar(
-              title: const Text("Youtube",
-                  style: TextStyle(
-                      fontSize: 25,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white)),
+              centerTitle: true,
+              title: const Text(
+                "Youtube",
+                style: TextStyle(
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white),
+              ),
               backgroundColor: Colors.red,
             ),
             Image.asset(
@@ -179,23 +185,26 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       Container(
         alignment: Alignment.center,
-        child: Text(
-          "Users",
-          style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+        child: const LinkedinPage(),
+      ),
+      Container(
+        alignment: Alignment.center,
+        child: Column(
+          children: <Widget>[
+            AppBar(
+              title: const Text("Github"),
+            ),
+          ],
         ),
       ),
       Container(
         alignment: Alignment.center,
-        child: Text(
-          "Messages",
-          style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-        ),
-      ),
-      Container(
-        alignment: Alignment.center,
-        child: Text(
-          "Settings",
-          style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+        child: Column(
+          children: <Widget>[
+            AppBar(
+              title: const Text("Instagram"),
+            ),
+          ],
         ),
       ),
     ];
