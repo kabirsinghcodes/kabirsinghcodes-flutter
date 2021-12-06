@@ -1,118 +1,110 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables
-
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:flutter/rendering.dart';
 import 'package:untitled/Pages/navbar.dart';
-import 'package:cupertino_icons/cupertino_icons.dart';
 
-class homepage extends StatelessWidget {
-  const homepage({Key? key}) : super(key: key);
+final List<String> images = [
+  'images/3d_img_1.png',
+  'images/3d_img_2.png',
+  'images/3d_img_3.png',
+  'images/3d_img_4.png'
+];
+
+class HomePage extends StatelessWidget {
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:   AppBar(
-        flexibleSpace: Container(
-          decoration: BoxDecoration(
-              gradient: LinearGradient(
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                  colors: <Color>[
-                    Colors.lightBlueAccent,
-                    Colors.greenAccent,
-                  ])
-          ),
-        ),
-      ),
-      backgroundColor: Colors.black12,
+      backgroundColor: Colors.black54,
       body: SafeArea(
-          child: Column(
-            children: <Widget>[
-              // ignore: prefer_const_constructors
-              Center(
-                child: Image.asset('images/ksc.png',
-                width: 250,
-                  height: 250,
-                )
+        child: Column(
+          children: <Widget>[
+            Flexible(
+              child: Center(
+                child: CarouselSlider.builder(
+                  itemCount: images.length,
+                  itemBuilder: (context, index, realIndex) {
+                    final img = images[index];
+                    return buildImage(img, index);
+                  },
+                  options: CarouselOptions(
+                    height: 450,
+                    autoPlay: true,
+                  ),
+                ),
               ),
-              const Text('Kabir Singh Codes',
-              style: TextStyle(
-                fontSize: 45,
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
+            ),
+            Container(
+              height: 250,
+              width: double.infinity,
+              decoration: const BoxDecoration(
+                color: Color(0xff262a3f),
+                borderRadius: BorderRadius.vertical(
+                  top: Radius.circular(50),
+                ),
               ),
-              ),
-                  SizedBox(height: 15),
-                  Expanded(
-                    child: Stack(
-                      children: [
-                        Container(
-                          decoration: BoxDecoration(
-                              gradient: LinearGradient(
-                                begin: Alignment.topRight,
-                                end: Alignment.bottomLeft,
-                                colors: [
-                                  Colors.lightBlueAccent,
-                                  Colors.greenAccent,
-                                ],
-                              ),
-                              borderRadius: BorderRadius.only(topLeft: Radius.circular(30.0), topRight: Radius.circular(30.0) )
-
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(18.0),
-                          child: AnimatedTextKit(
-                            animatedTexts: [
-                              TypewriterAnimatedText(
-                                'An App That Gives You Resources!',
-                                textAlign: TextAlign.center,
-                                textStyle: const TextStyle(
-                                  fontSize: 32.0,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ],
-                            totalRepeatCount: 100,
-                            pause: const Duration(milliseconds: 900),
-                            displayFullTextOnTap: true,
-                            stopPauseOnTap: true,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 150.0),
-                          child: AnimatedTextKit(
-                            animatedTexts: [
-                              TypewriterAnimatedText(
-                                'Notes, Videos, Problems, And Much More!',
-                                textAlign: TextAlign.center,
-                                textStyle: const TextStyle(
-                                  fontSize: 32.0,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ],
-                            totalRepeatCount: 100,
-                            pause: const Duration(milliseconds: 900),
-                            displayFullTextOnTap: true,
-                            stopPauseOnTap: true,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 380.0, left: 180),
-                          child: FloatingActionButton.extended(onPressed: (){
-                            Navigator.push(context, MaterialPageRoute(builder: (context) => MyHomePage()));
-                          },
-                              backgroundColor: Colors.black45,
-                              icon: Icon(Icons.app_registration),
-                              label: Text(''))
-                        )
-                      ],
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  const Text(
+                    'Kabir Singh Codes',
+                    style: TextStyle(
+                      fontFamily: 'Pacifico',
+                      fontSize: 45,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
                     ),
+                  ),
+                  Container(
+                    width: 80,
+                    height: 80,
+                    decoration: BoxDecoration(
+                      color: Colors.pink,
+                      border: Border.all(
+                        color: Colors.pink,
+                      ),
+                      borderRadius: const BorderRadius.all(
+                        Radius.circular(45),
+                      ),
                     ),
-            ],
-          )
+                    child: IconButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const MyHomePage(),
+                          ),
+                        );
+                      },
+                      icon: const Icon(
+                        Icons.arrow_forward_ios,
+                        color: Colors.white,
+                        size: 40,
+                      ),
+                    ),
+                  ),
+                  const Text(
+                    "Let's Go",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
+
+  Widget buildImage(String img, int index) => Container(
+        margin: const EdgeInsets.symmetric(horizontal: 12),
+        child: Image.asset(
+          img,
+          fit: BoxFit.fill,
+        ),
+      );
 }
