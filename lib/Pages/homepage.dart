@@ -50,7 +50,6 @@ class HomePage extends StatelessWidget {
                   const Text(
                     'Kabir Singh Codes',
                     style: TextStyle(
-                      fontFamily: 'Pacifico',
                       fontSize: 45,
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
