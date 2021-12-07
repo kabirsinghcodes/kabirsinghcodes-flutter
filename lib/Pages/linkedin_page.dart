@@ -86,7 +86,6 @@ class LinkedinPage extends StatelessWidget {
                   ),
                 ),
               ),
-
             ],
           ),
           Padding(
@@ -139,9 +138,9 @@ class LinkedinPage extends StatelessWidget {
               ),
             ),
           ),
-
-          SizedBox(height: 20,),
-
+          SizedBox(
+            height: 20,
+          ),
           Row(
             children: [
               Padding(
@@ -185,12 +184,12 @@ class LinkedinPage extends StatelessWidget {
                 ),
                 child: TextButton(
                   onPressed: () {},
-                  child:  Text(
+                  child: Text(
                     "Message",
-                    style: TextStyle(color: Colors.grey[900],
-                    fontWeight: FontWeight.bold,
-                      fontSize: 20
-                    ),
+                    style: TextStyle(
+                        color: Colors.grey[900],
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20),
                   ),
                 ),
               ),
@@ -213,7 +212,6 @@ class LinkedinPage extends StatelessWidget {
                   ),
                 ),
               ),
-
             ],
           ),
         ],
