@@ -22,31 +22,46 @@ class LinkedinPage extends StatelessWidget {
             ),
             centerTitle: true,
           ),
-          CachedNetworkImage(
-            height: 100,
-            width: double.infinity,
-            imageUrl:
-                "https://media-exp1.licdn.com/dms/image/C5616AQEXXBKeV5EqlQ/profile-displaybackgroundimage-shrink_200_800/0/1629385917358?e=1644451200&v=beta&t=5FYiDWmmYb3aWqkuV26cnenlqvHQVbplkLdvmDYWIgY",
-            placeholder: (context, url) => const CircularProgressIndicator(),
-            errorWidget: (context, url, error) => const Icon(Icons.error),
-          ),
-          CachedNetworkImage(
-            imageUrl:
-                "https://media-exp1.licdn.com/dms/image/C4D03AQHMlGS0d1r8OQ/profile-displayphoto-shrink_200_200/0/1602183435466?e=1644451200&v=beta&t=f6q_AXL_qjhEt0eCtfwaH7B7Ya5VzUre9dEFBNgq7sY",
-            placeholder: (context, url) => const CircularProgressIndicator(),
-            errorWidget: (context, url, error) => const Icon(Icons.error),
-            imageBuilder: (context, imageProvider) => Container(
-              width: 200.0,
-              height: 200.0,
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.black,
-                  width: 2.0,
-                ),
-                shape: BoxShape.circle,
-                image: DecorationImage(image: imageProvider, fit: BoxFit.cover),
+          Stack(
+            clipBehavior: Clip.none,
+            children: [
+              CachedNetworkImage(
+                height: 90,
+                width: double.infinity,
+                imageUrl:
+                    "https://media-exp1.licdn.com/dms/image/C5616AQEXXBKeV5EqlQ/profile-displaybackgroundimage-shrink_200_800/0/1629385917358?e=1644451200&v=beta&t=5FYiDWmmYb3aWqkuV26cnenlqvHQVbplkLdvmDYWIgY",
+                placeholder: (context, url) =>
+                    const CircularProgressIndicator(),
+                errorWidget: (context, url, error) => const Icon(Icons.error),
               ),
-            ),
+              Positioned(
+                top: 45,
+                left: 15,
+                child: CachedNetworkImage(
+                  imageUrl:
+                      "https://media-exp1.licdn.com/dms/image/C4D03AQHMlGS0d1r8OQ/profile-displayphoto-shrink_200_200/0/1602183435466?e=1644451200&v=beta&t=f6q_AXL_qjhEt0eCtfwaH7B7Ya5VzUre9dEFBNgq7sY",
+                  placeholder: (context, url) =>
+                      const CircularProgressIndicator(),
+                  errorWidget: (context, url, error) => const Icon(Icons.error),
+                  imageBuilder: (context, imageProvider) => Container(
+                    width: 150.0,
+                    height: 150.0,
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        color: Colors.black,
+                        width: 2.0,
+                      ),
+                      shape: BoxShape.circle,
+                      image: DecorationImage(
+                          image: imageProvider, fit: BoxFit.cover),
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(
+            height: 120,
           ),
           const Text(
             "Kabir Singh",
