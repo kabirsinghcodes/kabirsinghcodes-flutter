@@ -5,6 +5,7 @@ import 'package:simple_icons/simple_icons.dart';
 import 'package:untitled/Pages/custom_animated_bottom_bar.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:untitled/Pages/linkedin_page.dart';
+import 'package:untitled/Pages/github_page.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
@@ -43,7 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
       onItemSelected: (index) => setState(() => _currentIndex = index),
       items: <BottomNavyBarItem>[
         BottomNavyBarItem(
-          icon: const FaIcon(FontAwesomeIcons.video),
+          icon: const FaIcon(FontAwesomeIcons.youtube),
           title: const Text('Youtube'),
           activeColor: Colors.red,
           inactiveColor: _inactiveColor,
@@ -88,15 +89,8 @@ class _MyHomePageState extends State<MyHomePage> {
         child: const LinkedinPage(),
       ),
       Container(
-
         alignment: Alignment.center,
-        child: Column(
-          children: <Widget>[
-            AppBar(
-              title: const Text("Github"),
-            ),
-          ],
-        ),
+        child: Githubpage(),
       ),
       Container(
         alignment: Alignment.center,
