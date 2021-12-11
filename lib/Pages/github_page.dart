@@ -24,7 +24,7 @@ class Githubpage extends StatelessWidget {
             height: 10,
           ),
           Container(
-            height: 300,
+            height: 290,
             color: Color(0xff22272E),
             child: Column(
               children: [
@@ -65,12 +65,12 @@ class Githubpage extends StatelessWidget {
                   height: 10,
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(right: 120.0),
+                  padding: const EdgeInsets.only(left: 10.0),
                   child: Text(
-                    'Hey, there Nice to meet you ✌ I am an \n educator at unacademy and i write\n technical blogs for Scaler academy too!',
+                    'Hey, there Nice to meet you ✌ I am an  educator at unacademy and i write technical blogs for Scaler academy too!',
                     style: TextStyle(
                       color: Color(0xffADBAC7),
-                      fontSize: 15,
+                      fontSize: 18,
                     ),
                   ),
                 ),
@@ -83,19 +83,19 @@ class Githubpage extends StatelessWidget {
                     children: <Widget>[
                       Icon(
                         Icons.domain_outlined,
-                        color: Colors.white,
+                        color: Colors.grey[500],
                       ),
                       Text(
                         ' Unacademy      ',
-                        style: TextStyle(color: Colors.white),
+                        style: TextStyle(color: Colors.white, fontSize: 18),
                       ),
                       Icon(
                         Icons.location_on_outlined,
-                        color: Colors.white,
+                        color: Colors.grey[500],
                       ),
                       Text(
                         'Pune',
-                        style: TextStyle(color: Colors.white),
+                        style: TextStyle(color: Colors.white, fontSize: 18),
                       )
                     ],
                   ),
@@ -107,17 +107,25 @@ class Githubpage extends StatelessWidget {
                   padding: const EdgeInsets.only(left: 15.0),
                   child: Row(
                     children: [
-                      Icon(Icons.person_outline_rounded, color: Colors.white),
+                      Icon(
+                        Icons.person_outline_rounded,
+                        color: Colors.grey[500],
+                      ),
                       Text(
                         '  42 followers 	•  1 following',
-                        style: TextStyle(color: Colors.white),
+                        style: TextStyle(color: Colors.white, fontSize: 18),
                       )
                     ],
                   ),
                 )
               ],
             ),
-          )
+          ),
+          Container(
+            child: Column(
+              children: <Widget>[],
+            ),
+          ),
         ],
       ),
     );
