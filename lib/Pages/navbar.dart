@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:untitled/Pages/insta.dart';
 import 'package:untitled/Pages/youtubepage.dart';
 import 'package:simple_icons/simple_icons.dart';
 import 'package:untitled/Pages/custom_animated_bottom_bar.dart';
@@ -94,13 +95,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       Container(
         alignment: Alignment.center,
-        child: Column(
-          children: <Widget>[
-            AppBar(
-              title: const Text("Instagram"),
-            ),
-          ],
-        ),
+        // child: const SplashPage(),
       ),
     ];
     return IndexedStack(
