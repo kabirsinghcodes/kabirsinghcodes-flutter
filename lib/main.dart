@@ -1,18 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:untitled/Pages/homepage.dart';
+import 'package:untitled/Pages/squid_game.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      title: 'Countrol4Offical',
+      home: Scaffold(
+        appBar: AppBar(
+          centerTitle: true,
+          backgroundColor: Colors.black,
+          title: const Text(
+            'Kabir Singh Codes',
+            style: TextStyle(fontSize: 35),
+          ),
+        ),
+        body: SquidGame(),
+      ),
     );
   }
 }
