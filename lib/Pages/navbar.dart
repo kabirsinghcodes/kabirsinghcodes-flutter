@@ -1,6 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:untitled/Pages/insta.dart';
 import 'package:untitled/Pages/youtubepage.dart';
 import 'package:simple_icons/simple_icons.dart';
 import 'package:untitled/Pages/custom_animated_bottom_bar.dart';
@@ -23,11 +22,13 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black12,
-      body: SafeArea(
-        child: Column(
-          children: <Widget>[
-            getBody(),
-          ],
+      body: SingleChildScrollView(
+        child: SafeArea(
+          child: Column(
+            children: <Widget>[
+              getBody(),
+            ],
+          ),
         ),
       ),
       bottomNavigationBar: _buildBottomBar(),
@@ -91,7 +92,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       Container(
         alignment: Alignment.center,
-        child: Githubpage(),
+        child: SingleChildScrollView(child: Githubpage()),
       ),
       Container(
         alignment: Alignment.center,
