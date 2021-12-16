@@ -6,6 +6,7 @@ import 'package:untitled/Pages/custom_animated_bottom_bar.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:untitled/Pages/linkedin_page.dart';
 import 'package:untitled/Pages/github_page.dart';
+import 'package:untitled/Pages/instagrampage.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
@@ -71,7 +72,7 @@ class _MyHomePageState extends State<MyHomePage> {
         BottomNavyBarItem(
           icon: const Icon(SimpleIcons.instagram),
           title: const Text('Instagram'),
-          activeColor: Colors.purple,
+          activeColor: Color(0xff7A44C3),
           inactiveColor: _inactiveColor,
           textAlign: TextAlign.center,
         ),
@@ -96,6 +97,9 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       Container(
         alignment: Alignment.center,
+        child: SingleChildScrollView(
+          child: instapage(),
+        ),
         // child: const SplashPage(),
       ),
     ];
