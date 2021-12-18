@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 
+// ignore: camel_case_types
 class instapage extends StatelessWidget {
   const instapage({Key? key}) : super(key: key);
 
@@ -19,10 +20,9 @@ class instapage extends StatelessWidget {
           centerTitle: true,
         ),
         Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 10),
+              padding: const EdgeInsets.only(top: 25, right: 25),
               child: CachedNetworkImage(
                 imageUrl:
                     "https://avatars.githubusercontent.com/u/69685373?v=4",
@@ -30,8 +30,8 @@ class instapage extends StatelessWidget {
                     const CircularProgressIndicator(),
                 errorWidget: (context, url, error) => const Icon(Icons.error),
                 imageBuilder: (context, imageProvider) => Container(
-                  width: 120.0,
-                  height: 120.0,
+                  width: 100.0,
+                  height: 100.0,
                   decoration: BoxDecoration(
                     border: Border.all(
                       color: Colors.black,
@@ -44,11 +44,14 @@ class instapage extends StatelessWidget {
                 ),
               ),
             ),
-            const Text(
-              "kabirsinghcodes",
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 20,
+            Padding(
+              padding: const EdgeInsets.only(right: 25.0),
+              child: const Text(
+                "kabirsinghcodes",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 30,
+                ),
               ),
             ),
             const Icon(
@@ -61,11 +64,12 @@ class instapage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Container(
+              height: 40,
               margin: const EdgeInsets.all(10),
               decoration: BoxDecoration(
                 color: Colors.grey[900],
                 borderRadius: const BorderRadius.all(
-                  Radius.circular(10),
+                  Radius.circular(5),
                 ),
                 border: Border.all(
                   color: Colors.white,
@@ -74,7 +78,7 @@ class instapage extends StatelessWidget {
               child: TextButton(
                 onPressed: () {},
                 child: const Text(
-                  "Message",
+                  "    Message    ",
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 20,
@@ -83,12 +87,13 @@ class instapage extends StatelessWidget {
               ),
             ),
             Container(
-              width: 80,
+              height: 40,
+              width: 60,
               margin: const EdgeInsets.all(10),
               decoration: BoxDecoration(
                 color: Colors.grey[900],
                 borderRadius: const BorderRadius.all(
-                  Radius.circular(10),
+                  Radius.circular(5),
                 ),
                 border: Border.all(
                   color: Colors.white,
@@ -102,21 +107,25 @@ class instapage extends StatelessWidget {
                     Icon(
                       Icons.person,
                       color: Colors.white,
+                      size: 20,
                     ),
                     Icon(
                       Icons.check_outlined,
                       color: Colors.white,
+                      size: 20,
                     ),
                   ],
                 ),
               ),
             ),
             Container(
+              height: 40,
+              width: 60,
               margin: const EdgeInsets.all(10),
               decoration: BoxDecoration(
                 color: Colors.grey[900],
                 borderRadius: const BorderRadius.all(
-                  Radius.circular(10),
+                  Radius.circular(5),
                 ),
                 border: Border.all(
                   color: Colors.white,
@@ -125,7 +134,7 @@ class instapage extends StatelessWidget {
               child: const Icon(
                 Icons.expand_more_outlined,
                 color: Colors.white,
-                size: 50,
+                size: 30,
               ),
             ),
           ],
@@ -142,7 +151,7 @@ class instapage extends StatelessWidget {
         ),
         aboutText('Founder', ' @jigsawmindz'),
         aboutText('Mentor', ' @geeks_for_geeks'),
-        aboutText('Tech blog writer', ' @InterviewBit'),
+        aboutText('Tech blog writer', ' @InterviewBit / @Scaler Academy'),
         aboutText('Educator', ' @unacademy'),
         const Padding(
           padding: EdgeInsets.only(left: 15),
@@ -161,16 +170,37 @@ class instapage extends StatelessWidget {
         const SizedBox(
           height: 20,
         ),
+        Container(
+          width: double.infinity,
+          height: 1,
+          decoration: BoxDecoration(
+            border: Border.symmetric(
+              horizontal: BorderSide(color: Colors.grey),
+            ),
+          ),
+        ),
+        SizedBox(
+          height: 10,
+        ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            followersText("5", "posts"),
+            followersText("4", "posts"),
             followersText("201", "followers"),
             followersText("199", "following"),
           ],
         ),
         const SizedBox(
           height: 20,
+        ),
+        Container(
+          width: double.infinity,
+          height: 1,
+          decoration: BoxDecoration(
+            border: Border.symmetric(
+              horizontal: BorderSide(color: Colors.grey),
+            ),
+          ),
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
