@@ -1,16 +1,31 @@
-# untitled
+# KABIR SINGH CODES
+A Flutter application that includes clones of 4 different social media handles and a breif knowledge to ME :-)
+![logo]([images/ksc.png)
 
-A new Flutter project.
+#Inspiration
+Just a fun application that is a replica of all my social media accounts and is a one step information package too.
 
-## Getting Started
+#What it does
 
-This project is a starting point for a Flutter application.
+![gallery](pics/page1.png)
+![gallery](pics/page2.png)
+It starts up with a cool squid games UI and takes you towards the main application which consists of four different clones
 
-A few resources to get you started if this is your first Flutter project:
+The clones are as follows
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+# YOUTUBE
+![gallery](pics/yt.png)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# LINKEDIN
+![gallery](pics/linkedin.png)
+
+# GITHUB
+![gallery](pics/github.png)
+
+# INSTAGRAM
+![gallery](pics/insta.png)
+
+#How I built it
+
+This application is created using flutter and dart. 
+
