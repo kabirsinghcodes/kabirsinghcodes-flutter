@@ -2,10 +2,10 @@
 A Flutter application that includes clones of 4 different social media handles and a breif knowledge to ME :-)
 ![logo]([images/ksc.png)
 
-#Inspiration
+# Inspiration
 Just a fun application that is a replica of all my social media accounts and is a one step information package too.
 
-#What it does
+# What it does
 
 ![gallery](pics/page1.png)
 ![gallery](pics/page2.png)
@@ -25,7 +25,12 @@ The clones are as follows
 # INSTAGRAM
 ![gallery](pics/insta.png)
 
-#How I built it
+# How I built it
 
 This application is created using flutter and dart. 
 
+# Connect With ME
+LinkedIn : https://www.linkedin.com/in/kabirsinghcodes/
+Instagram : https://www.instagram.com/kabirsinghcodes/
+Github : https://github.com/kabirsinghcodes
+Youtube : https://www.youtube.com/c/KabirSinghCodes
